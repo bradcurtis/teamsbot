@@ -1,0 +1,57 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.6/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.6",
+    "version": "0.0.1",
+    "showLoadingIndicator": false,
+    "id": "04c1254d-cc37-4e29-b108-e324d144a966",
+    "packageName": "conversationalbot",
+    "developer": {
+        "name": "Contoso",
+        "websiteUrl": "https://{{HOSTNAME}}",
+        "privacyUrl": "https://{{HOSTNAME}}/privacy.html",
+        "termsOfUseUrl": "https://{{HOSTNAME}}/tou.html"
+    },
+    "icons": {
+        "color": "icon-color.png",
+        "outline": "icon-outline.png"
+    },
+    "name": {
+        "short": "Conversational Bot",
+        "full": "Conversational Bot"
+    },
+    "description": {
+        "short": "testing bot",
+        "full": "testing bot"
+    },
+    "accentColor": "#D85028",
+    "bots": [
+        {
+            "botId": "b44c18fa-db23-408b-853e-1031b3ad9a88",
+            "scopes": [
+                "personal"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal"
+                    ],
+                    "commands": [
+                        {
+                            "title": "MentionMe",
+                            "description": "Sends message with @mention of the sender"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "{{HOSTNAME}}"
+    ]
+}
